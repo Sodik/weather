@@ -1,0 +1,7 @@
+{
+  "name": "weather",
+  "main": "index.html",
+  "version": "0.12.0",
+  "dependencies": {},
+  "devDependencies": {}
+}

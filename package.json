@@ -1,0 +1,13 @@
+{
+  "name": "weather",
+  "main": "index.html",
+  "version": "0.12.0",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.3.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-node-webkit-builder": "^1.0.0"
+  },
+  "devDependencies": {}
+}

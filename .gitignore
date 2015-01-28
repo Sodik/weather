@@ -1,0 +1,6 @@
+cat .gitignore
+
+build/
+cache/
+node_modules/
+src/bower_components/
