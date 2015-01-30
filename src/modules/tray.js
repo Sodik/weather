@@ -5,7 +5,7 @@ var trayObject = {
 	create: function(){
 		tray = new gui.Tray(this.getOptions());
 
-	    tray.on('click', this.close.bind(this));
+	    //tray.on('click', this.close.bind(this));
 	},
 	getOptions: function(){
 		var data = currentWeather.toJSON();
@@ -15,11 +15,11 @@ var trayObject = {
 		};
 	},
 	createMessage: function(data){
-		var msg = [];
-		
 		if(!data){
 			return;
 		}
+
+		var msg = [];
 
 		msg.push('Температура: ' + data.main.temp);
 		msg.push('Влажность: ' + data.main.humidity);
@@ -48,6 +48,8 @@ var tray;
 currentWeather.on('change', function(model){
 	if(tray){
 		trayObject.update();
+	}else{
+		trayObject.create();
 	}
 });
 

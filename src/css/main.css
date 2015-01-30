@@ -1,0 +1,19 @@
+table img {
+	display: block;
+	margin: 0 auto;
+}
+#main-box td {
+	vertical-align: middle;
+	text-align: center;
+}
+#main-box td:first-child {
+	text-align: left;
+}
+#list td {
+	vertical-align: middle;
+	text-align: center;
+}
+.text-danger,
+.text-primary {
+	font-weight: bold;
+}

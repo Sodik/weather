@@ -24,9 +24,4 @@
   var dailyList = new DailyList();
   var mainBlock = new MainBlock();
 
-  win.on('minimize', function(){
-    this.hide();
-    tray.create();
-  });
-
 })(jQuery);

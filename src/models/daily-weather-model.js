@@ -21,14 +21,14 @@ module.exports = global.Backbone.Model.extend({
 	 	result.list.forEach(function(item){
 	 		item.dt_txt = global.moment.unix(item.dt).format('LL');
 	 		item.humidity = Math.round(item.humidity) + '%';
-	 		item.pressure = Math.round(item.pressure*global.mmHg) + 'мм. рт. ст.';
+	 		item.pressure = Math.round(item.pressure*global.mmHg) + ' мм. рт. ст.';
 	 		item.temp = {
-	 			day: item.temp.day + '°C',
-	 			min: item.temp.min + '°C',
-	 			max: item.temp.max + '°C',
-	 			night: item.temp.night + '°C',
-	 			eve: item.temp.eve + '°C',
-	 			morn: item.temp.morn + '°C'
+	 			day: parseFloat(item.temp.day.toFixed(1)) + '°C',
+	 			min: parseFloat(item.temp.min.toFixed(1)) + '°C',
+	 			max: parseFloat(item.temp.max.toFixed(1)) + '°C',
+	 			night: parseFloat(item.temp.night.toFixed(1)) + '°C',
+	 			eve: parseFloat(item.temp.eve.toFixed(1)) + '°C',
+	 			morn: parseFloat(item.temp.morn.toFixed(1)) + '°C'
 	 		}
 	 	});
 

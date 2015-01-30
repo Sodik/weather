@@ -28,10 +28,10 @@ module.exports = global.Backbone.Model.extend({
 		var result = _.cloneDeep(this.attributes);
 
 	 	result.main = {
-	 		temp: this.attributes.main.temp + '°C',
-	 		temp_min: this.attributes.main.temp_min + '°C',
-	 		temp_max: this.attributes.main.temp_max + '°C',
-	 		pressure: Math.round(this.attributes.main.pressure*global.mmHg) + 'мм. рт. ст.',
+	 		temp: parseFloat(this.attributes.main.temp.toFixed(1)) + '°C',
+	 		temp_min: parseFloat(this.attributes.main.temp_min.toFixed(1)) + '°C',
+	 		temp_max: parseFloat(this.attributes.main.temp_max.toFixed(1)) + '°C',
+	 		pressure: Math.round(this.attributes.main.pressure*global.mmHg) + ' мм. рт. ст.',
 	 		humidity: Math.round(this.attributes.main.humidity) + '%',
 	 	};
 	 	result.dt_txt = global.moment.unix(result.dt).format('LL');
